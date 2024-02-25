@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "gpu.js": "^2.16.0"
+  }
+}
