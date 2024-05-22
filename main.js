@@ -6,7 +6,7 @@ const { memoryUsage } = require("node:process");
 const primes = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101];
 
 const numCPUs = cpus().length;
-const number = 1e8;
+const number = 1e6;
 const string = number.toString().split(/(\d{1,3})?(\d{3})+?(\d{3})$/g).filter(Boolean).join(",");
 
 const batchSize = 3e4;
