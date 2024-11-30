@@ -21,16 +21,19 @@ const Types = {
 function factorial(min, max) {
   let prod = 1n;
   const fact = initFactors();
+  const middle = (min + max) / 2n;
 
-  for (let i = min, x = 0n; i <= max; i++) {
-    x = i;
-    for (const factor of factors) {
-      while (x % factor == 0n) {
-        x /= factor;
-        fact[factor]++;
-      }
+  for (let i = min, j = max; i <= middle; i++, j--) {
+    if (i == j) {
+      prod *= i;
     }
-    prod *= x;
+    // for (const factor of factors) {
+    //   while (x % factor == 0n) {
+    //     x /= factor;
+    //     fact[factor]++;
+    //   }
+    // }
+    prod *= (i * j);
   }
 
   return {
